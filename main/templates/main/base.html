@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{% block title %}My Site{% endblock %}</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+		>
+	</head>
+<body class="container mt-6">
+	<header>
+		<nav>
+			<a class="button is-primary is-light" href="/">Home</a>
+			<a class="button is-link is-light" href="/contact/">Contact</a>
+			<a class="button is-info is-light" href="/profile/">Profile</a>
+			<a class="button is-warning is-light" href="/agecheck/">agecheck</a>
+		</nav>
+	</header>
+
+	<hr>
+
+	{% block content %}
+		<!-- Page content -->
+	{% endblock %}
+
+	<hr>
+
+	<footer>
+		<p>&copy; 2025 My Django Site</p>
+	</footer>
+</body>
+</html>

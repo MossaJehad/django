@@ -1,0 +1,20 @@
+{% extends "main/base.html" %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+	<h1>Contact Page</h1>
+	<ul>
+		{% for name, email in emails.items %}
+				{% if name == "42Amman" %}
+					<li>
+						<strong>Name is having a numeric values</strong>: {{ email }}
+					</li>
+				{% else %}
+					<li>
+						<strong>{{ name }}</strong>: {{ email }}
+					</li>
+				{% endif %}
+		{% endfor %}
+	</ul>
+{% endblock %}

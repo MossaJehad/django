@@ -1,0 +1,24 @@
+{% extends "main/base.html" %}
+
+{% block title %}agecheck{% endblock %}
+
+{% block content %}
+	<main class="container">
+		<h2 class="mb-6">This is your agecheck page.</h2>
+		<form class="mb-6" method="get" action"func">
+			<label for="age">Enter Your Age</label>
+			<div id="age">
+				<input class="input mb-4" type="number" name="age" placeholder="please enter your age" required></input>
+				<button class="button" type="reset">Reset</button>
+				<button class="button" type="submit">Check</button>
+			</div>
+		</form>
+		<div>
+			{% if age >= 18 %}
+				<p>You are an adult</p>
+			{% else %}
+				<p>You are Underage</p>
+			{% endif %}
+		</div>
+	</main>
+{% endblock %}
