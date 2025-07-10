@@ -1,20 +1,24 @@
 {% extends "main/base.html" %}
+{% load static %}
 
 {% block title %}Contact{% endblock %}
 
 {% block content %}
 	<h1>Contact Page</h1>
+	<div class="image image is-3by1">
+		<img class="border-radius-5" src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg" alt="hamza" />
+	</div>
 	<ul>
 		{% for name, email in emails.items %}
-				{% if name == "42Amman" %}
-					<li>
-						<strong>Name is having a numeric values</strong>: {{ email }}
-					</li>
-				{% else %}
-					<li>
-						<strong>{{ name }}</strong>: {{ email }}
-					</li>
-				{% endif %}
+			{% if name == "42Amman" %}
+				<li>
+					<strong>Name is having a numeric values</strong>: {{ email }}
+				</li>
+			{% else %}
+				<li>
+					<strong>{{ name }}</strong>: {{ email }}
+				</li>
+			{% endif %}
 		{% endfor %}
 	</ul>
 {% endblock %}
